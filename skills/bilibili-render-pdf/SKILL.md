@@ -129,6 +129,8 @@ Keep the speaker's closing discussion when it carries actual teaching value, suc
 
 1. Write the notes in Chinese unless the user explicitly requests another language.
 
+   CRITICAL: This is a pure LaTeX document (.tex). NEVER write markdown syntax anywhere in the output. Specifically, DO NOT use markdown bold formatting like **bold text**; always use the native LaTeX command \textbf{bold text}. DO NOT write markdown headers like ###; always use standard LaTeX structural commands like \subsubsection{...}. Ensure all LaTeX environments (e.g. lists, boxes) are strictly opened and closed with matching \begin{...} and \end{...} tags.
+
 2. Organize the document with `\section{...}` and `\subsection{...}`.
    Reconstruct the teaching flow when needed; do not blindly mirror subtitle order.
    Each section should answer, in order when applicable: what problem is being solved, why simpler views are insufficient, what the core idea is, how it works, and what the reader should retain.
